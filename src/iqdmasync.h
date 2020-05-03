@@ -11,11 +11,13 @@
 
 class iqdmasync:public bufferdma,public clkgpio,public pwmgpio,public pcmgpio
 {
+        public:
+	int ModeIQ=MODE_IQ;
+
 	protected:
 	uint64_t tunefreq;
 	bool syncwithpwm;
 	dsp mydsp;
-	int ModeIQ=MODE_IQ;
 	uint32_t	Originfsel; //Save the original FSEL GPIO
 	uint32_t SampleRate;
 	public:
